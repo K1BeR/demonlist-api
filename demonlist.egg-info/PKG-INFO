@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: demonlist
-Version: 0.1
+Version: 0.11
 Summary: Asynchronous wrapper for the https://demonlist.org/ API
-Home-page: UNKNOWN
+Home-page: https://github.com/K1BeR/demonlist-api
 Author: Kirill Korolev
 Author-email: k1ber@protonmail.com
 License: UNKNOWN
