@@ -1,6 +1,4 @@
-import os
-import sys
-sys.path.insert(0, os.path.abspath(os.path.join('..', '..', 'demonlist')))
+import demonlist
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -12,7 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.join('..', '..', 'demonlist')))
 project = 'demonlist'
 copyright = '2022, Kirill Korolev'
 author = 'Kirill Korolev'
-release = '0.1'
+release = '0.11'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
