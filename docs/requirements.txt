@@ -1,2 +1,2 @@
-spinx-autoapi
+sphinx-autoapi
 sphinx-rtd-theme
