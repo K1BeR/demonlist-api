@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: demonlist
+Version: 0.1
+Summary: Asynchronous wrapper for the https://demonlist.org/ API
+Home-page: UNKNOWN
+Author: Kirill Korolev
+Author-email: k1ber@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+
+UNKNOWN
+

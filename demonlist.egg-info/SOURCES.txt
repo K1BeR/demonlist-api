@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+demonlist/__init__.py
+demonlist/client.py
+demonlist/demonlist.py
+demonlist/endpoints.py
+demonlist/enums.py
+demonlist/exceptions.py
+demonlist/utils.py
+demonlist.egg-info/PKG-INFO
+demonlist.egg-info/SOURCES.txt
+demonlist.egg-info/dependency_links.txt
+demonlist.egg-info/requires.txt
+demonlist.egg-info/top_level.txt
