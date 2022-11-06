@@ -29,13 +29,7 @@ After installation, you need to import the library in to your code:
 Example
 -------
 
-For example, you can call ``demonlist.Demonlist.sign_in()`` function to log in to your account:
-
-.. autofunction:: demonlist.Demonlist.sign_in()
-
-:py:func:`demonlist.Demonlist.sign_in()` will raise an exception.
-
-.. autoexception:: exceptions.WrongCredentials
+For example, you can call ``demonlist.Demonlist.sign_in()`` function to log in to your account.
 
 To do this, write the code below:
 
