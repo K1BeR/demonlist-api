@@ -1,0 +1,19 @@
+:py:mod:`demonlist.endpoints`
+=============================
+
+.. py:module:: demonlist.endpoints
+
+
+Module Contents
+---------------
+
+.. py:data:: LISTS
+   
+
+   
+
+.. py:data:: API_ENDPOINTS
+   
+
+   
+

@@ -1,0 +1,103 @@
+:py:mod:`demonlist.utils`
+=========================
+
+.. py:module:: demonlist.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   demonlist.utils.create_soup
+   demonlist.utils.get_name
+   demonlist.utils.get_img_title
+   demonlist.utils.get_group
+   demonlist.utils.get_category
+   demonlist.utils.get_contributors
+   demonlist.utils.get_description
+   demonlist.utils.get_video
+   demonlist.utils.get_demons
+   demonlist.utils.get_level_name
+   demonlist.utils.get_level_holder
+   demonlist.utils.get_level_link
+   demonlist.utils.get_level_video
+   demonlist.utils.get_whitelisted_players
+   demonlist.utils.get_text
+   demonlist.utils.get_profile_link
+   demonlist.utils.handle_response
+
+
+
+.. py:function:: create_soup(html: str) -> bs4.BeautifulSoup
+   :async:
+
+
+.. py:function:: get_name(soup: bs4.BeautifulSoup, owner: str) -> str
+   :async:
+
+
+.. py:function:: get_img_title(soup: bs4.BeautifulSoup, name)
+   :async:
+
+
+.. py:function:: get_group(soup: bs4.BeautifulSoup, group_number: int, owner: str)
+   :async:
+
+
+.. py:function:: get_category(soup: bs4.BeautifulSoup, category_number: int)
+   :async:
+
+
+.. py:function:: get_contributors(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_description(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_video(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_demons(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_level_name(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_level_holder(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_level_link(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_level_video(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_whitelisted_players(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_text(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: get_profile_link(soup: bs4.BeautifulSoup)
+   :async:
+
+
+.. py:function:: handle_response(res)
+   :async:
+
+

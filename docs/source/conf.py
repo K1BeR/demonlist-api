@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath(os.path.join('..', '..', 'build/lib/demonlist')))
+sys.path.insert(0, os.path.abspath(os.path.join('..', '..', 'demonlist')))
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -18,11 +18,10 @@ release = '0.11'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
+    'autoapi.extension'
 ]
+autoapi_type = 'python'
+autoapi_dirs = ['../../demonlist']
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -32,5 +31,5 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']

@@ -1,0 +1,333 @@
+:py:mod:`demonlist`
+===================
+
+.. py:module:: demonlist
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   client/index.rst
+   demonlist/index.rst
+   endpoints/index.rst
+   enums/index.rst
+   exceptions/index.rst
+   utils/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   demonlist.Demonlist
+
+
+
+
+.. py:class:: Demonlist
+
+   Bases: :py:obj:`client.Client`
+
+   .. py:attribute:: catch_exception
+      
+
+      
+
+   .. py:attribute:: is_logged_in
+      
+
+      
+
+   .. py:method:: catch_exception(fun)
+      :staticmethod:
+
+      A decorator taking action if an exception has been raised.
+
+
+   .. py:method:: is_logged_in(fun)
+      :staticmethod:
+
+      A decorator that checks whether the user is logged into the account.
+
+
+   .. py:method:: sign_in(login, password) -> bool
+      :async:
+
+      Logging in to the account.
+
+      :param login: user's login
+      :type login: str
+      :param password: user's password
+      :type password: str
+      :raise exceptions.WrongCredentials: If credentials are invalid
+      :return: True if the account was successfully logged in
+      :rtype: bool
+
+
+   .. py:method:: get_player_stats(player_id) -> dict
+      :async:
+
+      Returns the user's statistics by his id.
+
+      :param player_id: id of player
+      :type player_id: int or str
+      :return: User's statistic
+      :rtype: dict
+
+
+   .. py:method:: get_country_stats(country_name: str, list_type: endpoints.CountryListType) -> dict
+      :async:
+
+      Returns the country's statistics by his name.
+
+      :param country_name: Name of country
+      :type country_name: str
+      :param list_type: Type of list
+      :type list_type: CountryListType
+      :return: Country's statistics
+      :rtype: dict
+
+
+   .. py:method:: get_level_info(level_id) -> dict
+      :async:
+
+      Returns information about the level by its id.
+
+      :param level_id: Id of level
+      :type level_id: str or int
+      :return: Information about the level
+      :rtype: dict
+
+
+   .. py:method:: get_top(list_type: endpoints.DemonListType) -> list
+      :async:
+
+      Returns list of levels in order of difficulty.
+
+      :param list_type: Type of list
+      :type list_type: DemonListType
+      :return: List of levels
+      :rtype: list
+
+
+   .. py:method:: get_whitelist() -> list
+      :async:
+
+      Returns list of whitelisted players.
+
+      :return: List of whitelisted players
+      :rtype: list
+
+
+   .. py:method:: submit_record(level: str, progress: int, video: str, note: str) -> client.Response
+      :async:
+
+      Sending a record.
+
+      :param note: Additional notes you'd like to pass on to the list moderator receiving your submission
+      :type note: str
+      :param video: Video confirming the legitimacy of your record
+      :type video: str
+      :param progress: The progress made as percentage
+      :type progress: int
+      :param level: The name of level on which record was set
+      :type level: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: add_level_main(name: str, level_id: int, length_minutes: int, length_seconds: int, objects: int, version: str, verifier: str, holder: str, creator: str, video: str, song_link: str, score: int, min_percent: int, preview: object, password: str = '', description: str = '') -> client.Response
+      :async:
+
+      Adding a level to the main list.
+
+      :param description: Optional Description of the level
+      :type description: str
+      :param video: Verification video
+      :type video: str
+      :param level_id: Id of the level
+      :type level_id: int
+      :param name: Name of the level
+      :type name: str
+      :param length_minutes: Length of the level in minutes
+      :type length_minutes: int
+      :param length_seconds: Seconds
+      :type length_seconds: int
+      :param objects: Quantity of objects
+      :type objects: int
+      :param version: The version in which the level was created
+      :type version: str
+      :param verifier: Verifier of the level
+      :type verifier: str
+      :param holder: Holder of the level
+      :type holder: str
+      :param creator: Creator of the level
+      :type creator: str
+      :param song_link: Link to the song
+      :type song_link: str
+      :param score: Quantity of points given for passing
+      :type score: int
+      :param min_percent: Minimum percentage for inclusion in the list
+      :type min_percent: int
+      :param preview: Image preview file
+      :type preview: object
+      :param password: Optional password to copy the level
+      :type password: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: add_level_future(name: str, video: str, score: int, verifer: str, preview: object) -> client.Response
+      :async:
+
+      Adding a level to the future list.
+
+      :param video: Verification video
+      :type video: str
+      :param verifer: Verifier of the level
+      :type verifer: str
+      :param name: Name of the level
+      :type name: str
+      :param score: Quantity of points given for passing
+      :type score: int
+      :param preview: Image preview file
+      :type preview: object
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: add_record(user: str, level: str, progress: int, video: str) -> client.Response
+      :async:
+
+      Adding a record.
+
+      :param video: Verification video
+      :type video: str
+      :param user: Name of user
+      :type user: str
+      :param level: Name of level
+      :type level: str
+      :param progress: Progress of passage
+      :type progress: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: change_nickname(old_user: str, new_user: str) -> client.Response
+      :async:
+
+      Changing a nickname of the user.
+
+      :param old_user: Old name of the user
+      :type old_user: str
+      :param new_user: New name of the user
+      :type old_user: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: change_country(login: str, flag: str) -> client.Response
+      :async:
+
+      Changing a country of the user.
+
+      :param login: Name of the user
+      :type login: str
+      :param flag: File name with the flag (including the extension, e. g. ".png")
+      :type flag: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: change_badge(login: str, badge: endpoints.Badge) -> client.Response
+      :async:
+
+      Changing a badge of the user.
+
+      :param login: Name of the user
+      :type login: str
+      :param badge: Badge of the user
+      :type badge: Badge
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: ban_user(name: str, months: int) -> client.Response
+      :async:
+
+      Banning the user.
+
+      :param name: Name of the user
+      :type name: str
+      :param months: Time for which you want to block the user in months
+      :type months: int
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: unban_user(name: str) -> client.Response
+      :async:
+
+      Unbanning the user.
+
+      :param name: Name of the user
+      :type name: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: whitelist_user(name: str) -> client.Response
+      :async:
+
+      Adding the user to whitelist.
+
+      :param name: Name of the user
+      :type name: str
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: unwhitelist_user(whitelist_id: int) -> client.Response
+      :async:
+
+      Removing the user from whitelist.
+
+      :param whitelist_id: Id of the whitelist record
+      :type whitelist_id: int
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+   .. py:method:: requests(request_id: int, action: endpoints.RequestsAction) -> client.Response
+      :async:
+
+      Update the request.
+
+      :param request_id: Id of the request
+      :type request_id: int
+      :param action: Action you want to do
+      :type action: RequestsAction
+      :raise exceptions.NotLoggedIn: If user wasn't logged in
+      :return: Response from the site
+      :rtype: Response
+
+
+

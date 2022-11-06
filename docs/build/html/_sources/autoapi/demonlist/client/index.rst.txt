@@ -1,0 +1,63 @@
+:py:mod:`demonlist.client`
+==========================
+
+.. py:module:: demonlist.client
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   demonlist.client.Response
+   demonlist.client.Client
+
+
+
+
+.. py:class:: Response
+
+   .. py:attribute:: body
+      :annotation: :str
+
+      
+
+   .. py:attribute:: headers
+      :annotation: :dict
+
+      
+
+   .. py:attribute:: status
+      :annotation: :int
+
+      
+
+
+.. py:class:: Client
+
+   .. py:method:: __del__()
+
+
+   .. py:method:: request(method, path, *, data=None)
+      :async:
+
+      Sending a request to the server.
+      :param method: request method
+      :type method: str
+      :param path: path to the page
+      :type path: str
+      :param data: outgoing data
+      :type data: dict or None
+      :return: None
+
+
+   .. py:method:: disconnect()
+      :async:
+
+      Closing a client session.
+
+
+

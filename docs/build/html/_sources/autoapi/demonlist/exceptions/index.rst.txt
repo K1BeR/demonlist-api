@@ -1,0 +1,28 @@
+:py:mod:`demonlist.exceptions`
+==============================
+
+.. py:module:: demonlist.exceptions
+
+.. autoapi-nested-parse::
+
+   Custom exceptions.
+
+
+
+Module Contents
+---------------
+
+.. py:exception:: WrongCredentials
+
+   Bases: :py:obj:`Exception`
+
+   Raised if the user entered the wrong data to login.
+
+
+.. py:exception:: NotLoggedIn
+
+   Bases: :py:obj:`Exception`
+
+   Raised if the user is not logged into the account.
+
+

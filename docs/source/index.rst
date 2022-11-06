@@ -1,19 +1,13 @@
-Welcome to demonlist's documentation!
-=====================================
-
-**demonlist** is an asynchronous Python wrapper for https://demonlist.org/ API.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
+Welcome to Project's documentation!
+===================================
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Content:
 
-   usage
-   api
+Indices and tables
+==================
 
-Check out the :doc:`usage` section for further information, including how to
-:ref:`install <installation>` the project.
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

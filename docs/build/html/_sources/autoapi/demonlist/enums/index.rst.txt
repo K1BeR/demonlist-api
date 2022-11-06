@@ -1,0 +1,163 @@
+:py:mod:`demonlist.enums`
+=========================
+
+.. py:module:: demonlist.enums
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   demonlist.enums.CountryListType
+   demonlist.enums.DemonListType
+   demonlist.enums.JsonStatus
+   demonlist.enums.RequestsAction
+   demonlist.enums.Badge
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   demonlist.enums.Role
+
+
+.. py:class:: CountryListType
+
+   Bases: :py:obj:`enum.Enum`
+
+   Enumeration of country list types.
+
+   .. py:attribute:: main
+      :annotation: = main
+
+      This type shows only basic information.
+
+
+   .. py:attribute:: advanced
+      :annotation: = advanced
+
+      This type shows advanced information.
+
+
+
+.. py:class:: DemonListType
+
+   Bases: :py:obj:`enum.Enum`
+
+   Enumeration of demon list types.
+
+   .. py:attribute:: main
+      :annotation: = main
+
+      Demons standing 1-150.
+
+
+   .. py:attribute:: beyond
+      :annotation: = advanced
+
+      Demons out of the top 150.
+
+
+   .. py:attribute:: future
+      :annotation: = future
+
+      A list of demons that may be passed in the future.
+
+
+
+.. py:class:: JsonStatus
+
+   Bases: :py:obj:`enum.Enum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+
+   .. py:attribute:: ok
+      :annotation: = ok
+
+      
+
+
+.. py:class:: RequestsAction
+
+   Bases: :py:obj:`enum.Enum`
+
+   Enumeration of request actions.
+
+   .. py:attribute:: confirm
+      :annotation: = request_accept
+
+      Accept the request.
+
+
+   .. py:attribute:: reject
+      :annotation: = request_reject
+
+      Reject the request.
+
+
+   .. py:attribute:: delete
+      :annotation: = request_delete
+
+      Delete the request.
+
+
+
+.. py:class:: Badge
+
+   Bases: :py:obj:`enum.Enum`
+
+   Enumeration of user badges.
+
+   .. py:attribute:: PC
+      :annotation: = P
+
+      PC Player.
+
+
+   .. py:attribute:: Mobile
+      :annotation: = M
+
+      Mobile Player.
+
+
+   .. py:attribute:: Low_FPS
+      :annotation: = L
+
+      Low FPS Player.
+
+
+   .. py:attribute:: PC_Mobile
+      :annotation: = PM
+
+      PC/Mobile Player.
+
+
+   .. py:attribute:: PC_Low_FPS
+      :annotation: = PL
+
+      PC Low FPS Player.
+
+
+   .. py:attribute:: Former_Cheater
+      :annotation: = C
+
+      Former_Cheater.
+
+
+
+.. py:data:: Role
+   
+
+   
+
